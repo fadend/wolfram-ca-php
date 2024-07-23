@@ -15,7 +15,8 @@
 
 require_once('get_param.php');
 
-function printRuleDescriptionHtml(int $rule) {
+function printRuleDescriptionHtml(int $rule)
+{
     echo "Rule $rule maps ";
     for ($neighborhood = 0; $neighborhood < 8; $neighborhood++) {
         if ($neighborhood != 0) {
@@ -31,7 +32,8 @@ function printRuleDescriptionHtml(int $rule) {
     echo '.';
 }
 
-function sendCellularAutomataStepsImage(array $cellsInitialState, int $rule, int $numberOfSteps) {
+function sendCellularAutomataStepsImage(array $cellsInitialState, int $rule, int $numberOfSteps)
+{
     $cells = $cellsInitialState;
     $numberOfCells = count($cells);
 
@@ -102,7 +104,7 @@ if (get_with_default('image', 'no') == 'yes') {
     sendCellularAutomataStepsImage($cells, $rule, $numberOfSteps);
 } else {
     header('Content-type: text/html', true);
-?>
+    ?>
 <html>
 <head><title>Rule <?= $rule ?></title></head>
 <body>
