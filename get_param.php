@@ -2,11 +2,7 @@
 
 function get_with_default($name, $default)
 {
-    if (isset($_GET[$name])) {
-        return $_GET[$name];
-    } else {
-        return $default;
-    }
+    return $_GET[$name] ?? $default;
 }
 
 function int_param_with_default($name, $default)
