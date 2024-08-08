@@ -16,7 +16,7 @@
 
 declare(strict_types=1);
 
-require_once('get_param.php');
+require_once 'get_param.php';
 
 const START_TYPES = ['left', 'middle', 'multiple', 'right'];
 
